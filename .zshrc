@@ -72,6 +72,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
     zsh-autosuggestions
+    fzf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -103,8 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/opt/homebrew/bin:$PATH"
 
-alias v=nvim
-# alias cat=bat
+alias v="nvim"
+alias vf="fzf | xargs nvim"
+alias cat=bat
 alias ls=lsd
 source /Users/architgosain/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.nvm/nvm.sh
@@ -115,6 +117,33 @@ source ~/.nvm/nvm.sh
 
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
 export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 export PLOVER_CONFIG="~/Library/Application\ Support/plover/plover.cfg"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Coo stuff
+alias chtsh="sh cht.sh"
+alias proc='ps aux | fzf | awk "BEGIN {OFS=\", \"}; {print \$1,\$2}"'
+alias killproc='ps aux | fzf | awk "{print \$2}" | xargs kill'
+
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
+export FZF_CTRL_T_OPTS="  --walker-skip .git,node_modules,target --preview 'bat -n --color=always {}'  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window up:3:hidden:wrap --bind 'ctrl-/:toggle-preview'  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'  --color header:italic  --header 'Press CTRL-Y to copy command into clipboard'"
+export PATH="/opt/homebrew/opt/libxslt/bin:$PATH"
+export PATH="/opt/homebrew/opt/libxslt/bin:$PATH"
+export PATH="/opt/homebrew/opt/libxslt/bin:$PATH"
+export PATH="/opt/homebrew/opt/qt@5/bin:$PATH"
+export PATH="/opt/homebrew/opt/qt@5/bin:$PATH"
+export PATH="/opt/homebrew/opt/qt@5/bin:$PATH"
+
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+export VULKAN_SDK=/Users/architgosain/VulkanSDK/1.3.290.0/macOS
+export PATH=$VULKAN_SDK/bin:$PATH
+export DYLD_LIBRARY_PATH=$VULKAN_SDK/lib:$DYLD_LIBRARY_PATH
+export VK_ICD_FILENAMES=$VULKAN_SDK/share/vulkan/icd.d/MoltenVK_icd.json
+export VK_LAYER_PATH=$VULKAN_SDK/share/vulkan/explicit_layer.d
+
+source ~/fzf-git.sh/fzf-git.sh

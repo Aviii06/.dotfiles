@@ -1,0 +1,133 @@
+import = [
+    "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 10
+padding.y = 10
+
+decorations = "Buttonless"
+opacity = 0.8
+blur = false
+
+option_as_alt = "Both"
+
+[font]
+normal.family = "DroidSansMono Nerd Font"
+size = 16
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001c"
+key = "t"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001|"
+key = "d"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001-"
+key = "d"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0001x"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00011"
+key = "Key1"
+mods = "Command"
+
+
+[[keyboard.bindings]]
+chars = "\u00012"
+key = "Key2"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00013"
+key = "Key3"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00014"
+key = "Key4"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00015"
+key = "Key5"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00016"
+key = "Key6"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00017"
+key = "Key7"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00018"
+key = "Key8"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00019"
+key = "Key9"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u00010"
+key = "Key0"
+mods = "Command"
+
+
+[[keyboard.bindings]]
+chars = "\u0001h"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001l"
+key = "Right"
+mods = "Command"
+
+
+[[keyboard.bindings]]
+chars = "\u0001k"
+key = "Up"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001j"
+key = "Down"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001:"
+key = ":"
+mods = "Command|Shift"
