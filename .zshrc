@@ -1,4 +1,4 @@
-# If you come from bash you might have to change your $PATH.
+
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -108,6 +108,7 @@ alias v="nvim"
 alias vf="fzf | xargs nvim"
 alias cat=bat
 alias ls=lsd
+alias rm=trash
 source /Users/architgosain/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.nvm/nvm.sh
 
@@ -147,3 +148,4 @@ export VK_ICD_FILENAMES=$VULKAN_SDK/share/vulkan/icd.d/MoltenVK_icd.json
 export VK_LAYER_PATH=$VULKAN_SDK/share/vulkan/explicit_layer.d
 
 source ~/fzf-git.sh/fzf-git.sh
+
