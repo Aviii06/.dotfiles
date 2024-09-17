@@ -49,3 +49,14 @@ vim.api.nvim_create_autocmd('LspAttach',{
     end
 })
 
+
+require("neo-tree").setup({
+    window = {
+        position = 'right',
+    }
+})
+
+
+require('trouble').setup({
+})
+

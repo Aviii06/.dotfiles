@@ -11,7 +11,7 @@ padding.y = 10
 
 decorations = "Buttonless"
 opacity = 0.8
-blur = false
+blur = true
 
 option_as_alt = "Both"
 
@@ -107,6 +107,11 @@ mods = "Command"
 
 
 [[keyboard.bindings]]
+chars = "\u0001:"
+key = ":"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
 chars = "\u0001h"
 key = "Left"
 mods = "Command"
@@ -115,7 +120,6 @@ mods = "Command"
 chars = "\u0001l"
 key = "Right"
 mods = "Command"
-
 
 [[keyboard.bindings]]
 chars = "\u0001k"
@@ -127,7 +131,3 @@ chars = "\u0001j"
 key = "Down"
 mods = "Command"
 
-[[keyboard.bindings]]
-chars = "\u0001:"
-key = ":"
-mods = "Command|Shift"
