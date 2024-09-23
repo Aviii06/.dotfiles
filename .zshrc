@@ -1,4 +1,5 @@
-
+# For performance
+# zmodload zsh/zprof
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -107,20 +108,28 @@ export PATH="/opt/homebrew/bin:$PATH"
 alias v="nvim"
 alias vf="fzf | xargs nvim"
 alias cat=bat
-alias ls=lsd
 alias rm=trash
 source /Users/architgosain/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.nvm/nvm.sh
+
+if [[ -n $(print ~/.zcompdump(Nmh+24)) ]] {
+  # Regenerate completions because the dump file hasn't been modified within the last 24 hours
+  compinit
+} else {
+  # Reuse the existing completions file
+  compinit -C
+}
+
+# source ~/.nvm/nvm.sh
 
 # Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+# [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 
 
 # Load Angular CLI autocompletion.
-export PATH="/usr/local/opt/openssl@3/bin:$PATH"
-export PLOVER_CONFIG="~/Library/Application\ Support/plover/plover.cfg"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export PATH="/usr/local/opt/openssl@3/bin:$PATH"
+# export PLOVER_CONFIG="~/Library/Application\ Support/plover/plover.cfg"
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 # Coo stuff
@@ -149,3 +158,5 @@ export VK_LAYER_PATH=$VULKAN_SDK/share/vulkan/explicit_layer.d
 
 source ~/fzf-git.sh/fzf-git.sh
 
+# For performance
+# zprof
