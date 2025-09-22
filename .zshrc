@@ -171,3 +171,5 @@ export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 alias gcc=gcc-15
 export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
 export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
+eval "$(ssh-agent -s)"
+
