@@ -1,0 +1,17 @@
+keybind = global:cmd+1=ignore
+keybind = global:cmd+2=ignore
+keybind = global:cmd+3=ignore
+keybind = global:cmd+4=ignore
+keybind = global:cmd+5=ignore
+keybind = global:cmd+6=ignore
+keybind = global:cmd+7=ignore
+keybind = global:cmd+8=ignore
+keybind = global:cmd+9=ignore
+keybind = global:cmd+0=ignore
+
+keybind = alt+1=ignore
+keybind = alt+2=ignore
+keybind = alt+3=ignore
+keybind = alt+4=ignore
+keybind = alt+5=ignore
+keybind = alt+6=ignore

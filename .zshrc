@@ -107,7 +107,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 alias v="nvim"
 alias vf="fzf | xargs nvim"
-alias cat=bat
 alias rm=trash
 source /Users/architgosain/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -135,7 +134,6 @@ if [[ -n $(print ~/.zcompdump(Nmh+24)) ]] {
 # Coo stuff
 alias chtsh="sh cht.sh"
 alias proc='ps aux | fzf | awk "BEGIN {OFS=\", \"}; {print \$1,\$2}"'
-alias killproc='ps aux | fzf | awk "{print \$2}" | xargs kill'
 
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
@@ -160,3 +158,16 @@ source ~/fzf-git.sh/fzf-git.sh
 
 # For performance
 # zprof
+export PATH="/opt/homebrew/opt/libxslt/bin:$PATH"
+export PATH="/opt/homebrew/opt/qt@5/bin:$PATH"
+if [ "$(arch)" = "arm64" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+alias gcc=gcc-15
+export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
+export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
